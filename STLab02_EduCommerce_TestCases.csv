@@ -1,0 +1,16 @@
+Test_Case_ID,Requirement_ID,Scenario_ID,Test_Case,Test_Data,Expected_Result
+TC-01,REQ-01,TS-01,Get active product,A,Trả về Wireless Mouse
+TC-02,REQ-01,TS-02,Get unavailable product,Z,PRODUCT_UNAVAILABLE
+TC-03,REQ-01,TS-02,Get inactive product,A,PRODUCT_UNAVAILABLE
+TC-04,REQ-02,TS-03,Add valid quantity,A quantity=2,Cart có A với quantity=2
+TC-05,REQ-02,TS-04,Add zero quantity,A quantity=0,INVALID_QUANTITY
+TC-06,REQ-02,TS-04,Add same product twice,A quantity=2 then 3,Cart có A với quantity=5
+TC-07,REQ-03,TS-05,Calculate subtotal,A quantity=2,Subtotal=400000
+TC-08,REQ-03,TS-06,Calculate mixed subtotal,A quantity=1 and B quantity=1,Subtotal=500000
+TC-09,REQ-03,TS-06,Calculate subtotal below threshold,C quantity=3,Subtotal=450000
+TC-10,REQ-09,TS-07,Inner shipping free threshold,subtotal=500000 area=inner,Shipping=0
+TC-11,REQ-09,TS-08,Inner shipping below threshold,subtotal=300000 area=inner,Shipping=30000
+TC-12,REQ-09,TS-08,Outer shipping,subtotal=300000 area=outer,Shipping=50000
+TC-13,REQ-14,TS-09,Checkout empty cart,empty cart,EMPTY_CART
+TC-14,REQ-14,TS-10,Checkout valid cart,A quantity=1,Checkout tạo order
+TC-15,REQ-14,TS-09,Checkout empty cart with voucher,empty cart voucher=SAVE10,EMPTY_CART

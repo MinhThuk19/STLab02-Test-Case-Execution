@@ -1,0 +1,173 @@
+
+<h1>STLab02 - Test Execution Report</h1>
+<h2>Execution Summary</h2>
+<p>Total Test Cases: 15</p>
+<p>PASS: 15</p>
+<p>FAIL: 0</p>
+<h2>Test Case Details</h2>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Test_Case_ID</th>
+      <th>Requirement_ID</th>
+      <th>Scenario_ID</th>
+      <th>Test_Case</th>
+      <th>Test_Data</th>
+      <th>Expected_Result</th>
+      <th>Actual_Result</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>TC-01</td>
+      <td>REQ-01</td>
+      <td>TS-01</td>
+      <td>Get active product</td>
+      <td>A</td>
+      <td>Trả về Wireless Mouse</td>
+      <td>Trả về Wireless Mouse</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-02</td>
+      <td>REQ-01</td>
+      <td>TS-02</td>
+      <td>Get unavailable product</td>
+      <td>Z</td>
+      <td>PRODUCT_UNAVAILABLE</td>
+      <td>PRODUCT_UNAVAILABLE</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-03</td>
+      <td>REQ-01</td>
+      <td>TS-02</td>
+      <td>Get inactive product</td>
+      <td>A</td>
+      <td>PRODUCT_UNAVAILABLE</td>
+      <td>PRODUCT_UNAVAILABLE</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-04</td>
+      <td>REQ-02</td>
+      <td>TS-03</td>
+      <td>Add valid quantity</td>
+      <td>A quantity=2</td>
+      <td>Cart có A với quantity=2</td>
+      <td>Cart có A với quantity=2</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-05</td>
+      <td>REQ-02</td>
+      <td>TS-04</td>
+      <td>Add zero quantity</td>
+      <td>A quantity=0</td>
+      <td>INVALID_QUANTITY</td>
+      <td>INVALID_QUANTITY</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-06</td>
+      <td>REQ-02</td>
+      <td>TS-04</td>
+      <td>Add same product twice</td>
+      <td>A quantity=2 then 3</td>
+      <td>Cart có A với quantity=5</td>
+      <td>Cart có A với quantity=5</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-07</td>
+      <td>REQ-03</td>
+      <td>TS-05</td>
+      <td>Calculate subtotal</td>
+      <td>A quantity=2</td>
+      <td>Subtotal=400000</td>
+      <td>Subtotal=400000</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-08</td>
+      <td>REQ-03</td>
+      <td>TS-06</td>
+      <td>Calculate mixed subtotal</td>
+      <td>A quantity=1 and B quantity=1</td>
+      <td>Subtotal=500000</td>
+      <td>Subtotal=500000</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-09</td>
+      <td>REQ-03</td>
+      <td>TS-06</td>
+      <td>Calculate subtotal below threshold</td>
+      <td>C quantity=3</td>
+      <td>Subtotal=450000</td>
+      <td>Subtotal=450000</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-10</td>
+      <td>REQ-09</td>
+      <td>TS-07</td>
+      <td>Inner shipping free threshold</td>
+      <td>subtotal=500000 area=inner</td>
+      <td>Shipping=0</td>
+      <td>Shipping=0</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-11</td>
+      <td>REQ-09</td>
+      <td>TS-08</td>
+      <td>Inner shipping below threshold</td>
+      <td>subtotal=300000 area=inner</td>
+      <td>Shipping=30000</td>
+      <td>Shipping=30000</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-12</td>
+      <td>REQ-09</td>
+      <td>TS-08</td>
+      <td>Outer shipping</td>
+      <td>subtotal=300000 area=outer</td>
+      <td>Shipping=50000</td>
+      <td>Shipping=50000</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-13</td>
+      <td>REQ-14</td>
+      <td>TS-09</td>
+      <td>Checkout empty cart</td>
+      <td>empty cart</td>
+      <td>EMPTY_CART</td>
+      <td>EMPTY_CART</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-14</td>
+      <td>REQ-14</td>
+      <td>TS-10</td>
+      <td>Checkout valid cart</td>
+      <td>A quantity=1</td>
+      <td>Checkout tạo order</td>
+      <td>Checkout tạo order ORD-0001</td>
+      <td>PASS</td>
+    </tr>
+    <tr>
+      <td>TC-15</td>
+      <td>REQ-14</td>
+      <td>TS-09</td>
+      <td>Checkout empty cart with voucher</td>
+      <td>empty cart voucher=SAVE10</td>
+      <td>EMPTY_CART</td>
+      <td>EMPTY_CART</td>
+      <td>PASS</td>
+    </tr>
+  </tbody>
+</table>
